@@ -1,34 +1,3 @@
-/*html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, hgroup, menu, section, summary,
-time, mark, audio, video, main, nav, header {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
-}
-input:focus,
-textarea:focus {
-  outline: none;
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-  display:block;
-}
-*/
-
 
 @font-face {
   font-weight: normal;
@@ -69,7 +38,7 @@ footer,header,hgroup,menu,nav,section {
 
 /* '▲' */
 
-.icon-down-dir:before {
+.icon-down-dir-active:before {
   content: "\25bc";
 }
 
@@ -115,7 +84,6 @@ footer,header,hgroup,menu,nav,section {
   content: "\f39e";
 }
 
-/* '' */
 
 
 html {
@@ -151,34 +119,6 @@ header {
     position:relative;
 	margin:0;
 }
-
-header ul {
-    display:flex;
-    margin:0;
-    padding-top: 13px;
-    padding-bottom: 17px;
-    line-height: 26px;
-}
-ul{
-	padding:0;
-	list-style:none;
-	
-}
-/*.menu{
-	padding:0;
-	font-size:0;
-}
-
-
-.menu li:nth-child(1){
-	padding-left:72px;
-}
-.menu li{
-	box-sizing: border-box;
-	width:240px;
-	list-style:none;
-}
-*/
 
 .menu {
   padding: 0;
@@ -233,12 +173,6 @@ ul{
 	background-image: url(../img/background_photo.jpg);
 	background-position-x: 50%;
     background-position-y: -60px;
-    /* background-size: initial;
-    background-repeat-x: no-repeat;
-    background-repeat-y: no-repeat;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;  ??? */ 
     flex-direction: column;
 	align-items: center; 
 	}
@@ -389,12 +323,7 @@ h1 {
   height: 593px;
 }
 
-.map-canvas {
-  height: 593px;
-  background: #cbdda9 url("../img/map.jpg") no-repeat;
-  background-size: cover;
-  background-position: center 0px;
-}
+
 
 .map-canvas iframe {
   width: 100%;
@@ -437,17 +366,7 @@ h1 {
   }
 }
 
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-10px);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(10px);
-  }
-}
+
 
 input.booking-calendar[type="text"] {
   width: 281px;
@@ -557,7 +476,7 @@ input.booking-calendar-select:hover {
 .form-btn-blue {
   display: block;
   margin-top: 54px;
-  padding: 15px 196px;
+  padding: 15px 192px;
   font-weight: bold;
   font-size: 21px;
   text-align: center;
@@ -600,9 +519,6 @@ input.booking-calendar-select:hover {
 }
 
 .selection-form {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     padding: 0 72px;
     padding-top: 26px;
@@ -634,9 +550,7 @@ input.booking-calendar-select:hover {
 .selection-form input[type="checkbox"]:checked + label::before {
     content: "\2611";
 }
-.selection-form input[type="checkbox"]:checked:disabled + label::before {
-    color: #6a6a6a;
-}
+
 .infrasrtrucure-item {
     width: 256px;
 }
@@ -848,24 +762,12 @@ input.booking-calendar-select:hover {
 }
 
 
-.results-block {
-    background: #fefefe;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
 .result-item {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+
     display: flex;
     padding: 25px 72px;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
     -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
 }
 .result-image {
